@@ -1,0 +1,16 @@
+{
+  "name": "module-bundler",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node src/index.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/traverse": "^7.15.0",
+    "uuid": "^8.3.2"
+  }
+}
