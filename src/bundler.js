@@ -3,7 +3,7 @@ import './types.js'
 /**
  * Generates a bundled version of a given module
  *
- * @param {AssetType[]} graph
+ * @param {AssetType[]} graph Graph of all the code and dependencies of a given package
  * @returns {string} Bundled package
  */
 export default function generateBundle(graph) {
@@ -40,5 +40,8 @@ export default function generateBundle(graph) {
     })({ ${modules} });
   `
 
+  // !UNSAFE - This must be replaced.
+  // This must be replaced to something that doesn't
+  // remove all tabs from the users code, lol.
   return result.replace(/  |\r\n|\n|\r/gm, '')
 }
